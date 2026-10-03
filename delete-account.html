@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изтриване на акаунт и данни — СпаркСтоп</title>
+  <meta name="description" content="Как да изтриеш акаунта си в СпаркСтоп и всички свързани данни — директно в приложението или по имейл. How to delete your SparkStop account and data.">
+  <link rel="canonical" href="https://sparkstopapp.com/delete-account.html">
+  <link rel="icon" type="image/png" href="/favicon-32.png">
+  <link rel="stylesheet" href="/vendor/tailwind/tailwind-built.css">
+  <link href="/vendor/fonts/fonts.css" rel="stylesheet">
+  <script src="/vendor/lucide/lucide.min.js"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #060B19;
+      color: #F3F4F6;
+    }
+    /* Gradient on its own fixed layer - `background-attachment: fixed` re-paints the
+       whole background on every scroll frame on phones. */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: radial-gradient(circle at 18% 22%, rgba(6, 182, 212, 0.16), transparent 40%),
+                  radial-gradient(circle at 82% 64%, rgba(120, 35, 190, 0.28), transparent 45%),
+                  #060B19;
+    }
+    .glass-card {
+      background: rgba(12, 25, 58, 0.75);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+    h2 { scroll-margin-top: 90px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="w-full px-4 sm:px-6 py-4 border-b border-white/5">
+    <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
+      <a href="/" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-black border border-cyan-400/30">
+          <img src="/icon-192.png" alt="" class="w-full h-full object-cover">
+        </div>
+        <span class="font-extrabold text-lg">СпаркСтоп</span>
+      </a>
+      <a href="/" class="text-xs sm:text-sm font-semibold text-gray-400 hover:text-cyan-300 transition flex items-center gap-1.5">
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Назад към началната страница
+      </a>
+    </div>
+  </header>
+
+
+  <main class="flex-1 max-w-3xl mx-auto px-4 sm:px-6 py-10 w-full">
+    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-red-500/10 border border-red-400/30 text-red-300 text-[11px] font-bold uppercase tracking-wider mb-4">
+      <i data-lucide="trash-2" class="w-3 h-3"></i> Изтриване на данни
+    </span>
+    <h1 class="text-3xl font-extrabold mb-2">Изтриване на акаунт и данни</h1>
+    <p class="text-sm text-gray-400 mb-8">Последна редакция: 26 септември 2026 г. · Приложение: СпаркСтоп (sparkstopapp.com)</p>
+
+    <div class="glass-card rounded-2xl p-5 sm:p-7 space-y-8 text-sm leading-[1.6] text-[#d1d5db]">
+
+      <section>
+        <h2 id="in-app" class="text-lg font-bold text-white mb-2">1. Изтриване директно в приложението (незабавно)</h2>
+        <ol class="list-decimal pl-5 space-y-1.5">
+          <li>Влез в акаунта си в СпаркСтоп (приложението за Android или sparkstopapp.com).</li>
+          <li>Натисни иконата на профила горе вдясно.</li>
+          <li>Избери <strong class="text-white">„Изтрий акаунта“</strong> и потвърди.</li>
+        </ol>
+        <p class="mt-3">Действието е <strong class="text-white">незабавно и необратимо</strong>.</p>
+      </section>
+
+      <section>
+        <h2 id="what" class="text-lg font-bold text-white mb-2">2. Какво се изтрива</h2>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li>акаунтът: имейл адрес, телефонен номер (ако си въвел) и хеш на паролата;</li>
+          <li>всички запазени адреси (име, населено място, улица/квартал и GPS координати);</li>
+          <li>токените за push известия, свързани с акаунта и адресите ти.</li>
+        </ul>
+        <p class="mt-3">Не задържаме копия за собствена употреба; технически резервни копия на хостинг доставчика се презаписват автоматично в срок до 30 дни. Общите данни за авариите (те са публична информация от доставчиците и не са свързани с теб) не са лични данни и не се изтриват.</p>
+      </section>
+
+      <section>
+        <h2 id="email" class="text-lg font-bold text-white mb-2">3. Нямаш достъп до приложението?</h2>
+        <p>Пиши ни от имейла, с който си се регистрирал, на <a href="mailto:contact@sparkstopapp.com?subject=Изтриване%20на%20акаунт" class="text-cyan-300 hover:text-cyan-200 underline">contact@sparkstopapp.com</a> със заглавие „Изтриване на акаунт“. Ще изтрием акаунта и данните ти в срок до 30 дни (обикновено за няколко дни) и ще те уведомим по имейл.</p>
+      </section>
+
+      <section>
+        <h2 id="guest" class="text-lg font-bold text-white mb-2">4. Използване без акаунт (гост)</h2>
+        <p>Без акаунт не пазим имейл или име. Запазените адреси са свързани само със случайно устройствено число. Можеш да ги изтриеш един по един с бутона „Изтрий“ до всеки адрес или да изтриеш всичко, като деинсталираш приложението / изчистиш данните на сайта. За изтриване на адреси от гост-устройство по имейл ни изпрати името на адреса и населеното място.</p>
+      </section>
+
+      <section>
+        <h2 id="en" class="text-lg font-bold text-white mb-2">English summary</h2>
+        <p><strong class="text-white">To delete your SparkStop account and data:</strong> sign in, tap the profile icon (top right) and choose “Изтрий акаунта” (Delete account). Your e-mail, phone number (if any), password hash, all saved addresses and push notification tokens are deleted immediately and permanently. If you cannot access the app, e-mail <a href="mailto:contact@sparkstopapp.com?subject=Delete%20my%20account" class="text-cyan-300 hover:text-cyan-200 underline">contact@sparkstopapp.com</a> from your registered address and we will delete everything within 30 days. See also our <a href="/privacy.html" class="text-cyan-300 hover:text-cyan-200 underline">privacy policy</a>.</p>
+      </section>
+
+    </div>
+
+    <div class="mt-8 text-center">
+      <a href="/" class="text-cyan-300 hover:text-cyan-200 text-sm font-semibold">← Обратно към СпаркСтоп</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-[#070b15] py-12 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col items-center text-center md:flex-row md:flex-wrap md:justify-center md:items-start md:text-left gap-x-16 gap-y-10">
+
+        <div class="space-y-3 md:max-w-xs">
+          <a href="/" class="flex items-center justify-center md:justify-start gap-2.5">
+            <div class="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-black border border-cyan-400/30 flex-shrink-0">
+              <img src="/icon-192.png" alt="" class="w-full h-full object-cover">
+            </div>
+            <span class="font-extrabold text-lg text-white">СпаркСтоп</span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Следи в реално време аварии на ток, вода, парно и газ в цяла България. Автоматично събрани данни от официалните доставчици, на едно място.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 tracking-wider mb-4">ИНФОРМАЦИЯ</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="/about.html" class="hover:text-cyan-300 transition">За проекта</a></li>
+            <li><a href="/#official-sources" class="hover:text-cyan-300 transition">Официални източници</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 tracking-wider mb-4">ПРАВНИ УСЛОВИЯ</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="/terms.html" class="hover:text-cyan-300 transition">Общи условия</a></li>
+            <li><a href="/privacy.html" class="hover:text-cyan-300 transition">Политика за поверителност</a></li>
+            <li><a href="/gdpr.html" class="hover:text-cyan-300 transition">GDPR</a></li>
+          </ul>
+          <a href="mailto:contact@sparkstopapp.com" class="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-cyan-300 transition mt-4">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-cyan-400"></i> contact@sparkstopapp.com
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-white/5 text-center text-xs text-gray-400">
+        © 2026 SparkStop. Разработено от Павел Герев • Всички права запазени.
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sparkstop.app",
+      "sha256_cert_fingerprints": [
+        "6E:8F:62:8F:C5:C2:D1:CC:7A:53:82:B4:95:30:56:10:A7:F8:A3:91:61:E6:62:50:B0:1F:20:C3:84:51:0E:39"
+      ]
+    }
+  }
+]

@@ -1,0 +1,92 @@
+<!-- СпаркСтоп (SparkStop) — © 2026 Pavel Gerev. Page for site operators who see "SparkStopBot" in their logs. -->
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SparkStopBot — за администратори на сайтове</title>
+  <meta name="description" content="Какво е SparkStopBot, кои страници чете, колко често, и как да го разрешите или спрете.">
+  <link rel="canonical" href="https://sparkstopapp.com/bot.html">
+  <link rel="icon" type="image/png" href="/favicon-32.png">
+  <link rel="stylesheet" href="/vendor/tailwind/tailwind-built.css">
+  <link href="/vendor/fonts/fonts.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #060B19;
+      color: #F3F4F6;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: radial-gradient(circle at 18% 22%, rgba(6, 182, 212, 0.16), transparent 40%),
+                  radial-gradient(circle at 82% 64%, rgba(120, 35, 190, 0.28), transparent 45%),
+                  #060B19;
+    }
+    .glass-card {
+      background: rgba(12, 25, 58, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+    code { background: rgba(255, 255, 255, 0.08); padding: 0.1rem 0.4rem; border-radius: 0.4rem; font-size: 0.85em; word-break: break-all; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="w-full px-4 sm:px-6 py-4 border-b border-white/5">
+    <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
+      <a href="/" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-black border border-cyan-400/30">
+          <img src="/icon-192.png" alt="" class="w-full h-full object-cover">
+        </div>
+        <span class="font-extrabold text-lg">СпаркСтоп</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-3xl mx-auto px-4 sm:px-6 py-10 w-full">
+    <h1 class="text-2xl sm:text-3xl font-extrabold mb-2">SparkStopBot</h1>
+    <p class="text-gray-400 text-sm mb-8">Страница за администратори на сайтове на ВиК, електроразпределителни, топло- и газоснабдителни дружества.</p>
+
+    <div class="space-y-5 text-sm leading-relaxed text-gray-300">
+      <section class="glass-card rounded-2xl p-5">
+        <h2 class="font-bold text-white mb-2">Кои сме и защо четем сайта ви</h2>
+        <p><a href="https://sparkstopapp.com" class="text-cyan-300 underline">СпаркСтоп</a> е безплатно приложение, което показва на жителите аварии и планови прекъсвания на ток, вода, парно и газ на едно място. Данните идват от <strong>публичните съобщения на самите доставчици</strong>. Всяка авария в приложението сочи обратно към вашата страница като официален източник.</p>
+      </section>
+
+      <section class="glass-card rounded-2xl p-5">
+        <h2 class="font-bold text-white mb-2">Какво точно правим</h2>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li>Четем само страницата ви със съобщения за аварии/ремонти и отделните съобщения, към които тя сочи. Не четем клиентски портали, формуляри или нещо зад вход.</li>
+          <li>Около веднъж на 5 минути — една заявка, без повторения при отказ. Ако сървърът ви върне <code>Retry-After</code> (например „опитайте след час"), чакаме поне толкова преди следния опит.</li>
+          <li>Не събираме и не публикуваме лични данни — само какво, къде и кога е засегнато.</li>
+          <li>Не се опитваме да заобикаляме защита. Ако ни откажете достъп, ще останем без данни от вас, докато не решите друго.</li>
+        </ul>
+      </section>
+
+      <section class="glass-card rounded-2xl p-5">
+        <h2 class="font-bold text-white mb-2">Как се представяме</h2>
+        <p class="mb-2">Заявките ни към някои сайтове носят този <code>User-Agent</code>:</p>
+        <p class="mb-2"><code>SparkStopBot/1.0 (+https://sparkstopapp.com/bot.html; contact@sparkstopapp.com)</code></p>
+        <p>Идват от сървър на Render (облачна платформа), затова не са от български адрес. Ако сте получили блокиране или проверка за бот при заявките ни, можете да ни разрешите по този <code>User-Agent</code>; адресът, от който идват, се вижда в логовете на защитната ви стена.</p>
+      </section>
+
+      <section class="glass-card rounded-2xl p-5">
+        <h2 class="font-bold text-white mb-2">Как да ни разрешите, ограничите или спрете</h2>
+        <ul class="list-disc pl-5 space-y-1.5">
+          <li><strong>Да ни разрешите:</strong> добавете правило за горния <code>User-Agent</code> във вашия Cloudflare/Wordfence/Imunify и ни пишете да проверим.</li>
+          <li><strong>Да четем по-рядко или друга страница/фийд:</strong> кажете ни — ще го наместим (например RSS, JSON или отделна страница само за аварии).</li>
+          <li><strong>Да спрем напълно:</strong> пишете ни и спираме четенето на сайта ви веднага.</li>
+        </ul>
+        <p class="mt-3">Контакт: <a href="mailto:contact@sparkstopapp.com" class="text-cyan-300 underline">contact@sparkstopapp.com</a></p>
+      </section>
+
+      <section class="glass-card rounded-2xl p-5">
+        <h2 class="font-bold text-white mb-2">In English</h2>
+        <p>SparkStopBot reads the public outage/maintenance announcements of Bulgarian utility providers for <a href="https://sparkstopapp.com" class="text-cyan-300 underline">sparkstopapp.com</a>, a free app that shows residents where power, water, heating and gas are interrupted, always linking back to the provider's own page. About one request per 5 minutes per site, with no retries on refusal; it honours <code>Retry-After</code> and does not attempt to get around blocks. To allow, throttle or stop it, allow-list the User-Agent above or write to <a href="mailto:contact@sparkstopapp.com" class="text-cyan-300 underline">contact@sparkstopapp.com</a>.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

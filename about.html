@@ -1,0 +1,191 @@
+<!-- СпаркСтоп (SparkStop) — © 2026 Pavel Gerev. Created for the John Atanasov Award. -->
+<!doctype html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>За проекта — СпаркСтоп</title>
+  <meta name="description" content="СпаркСтоп автоматично събира данни за аварии на ток, вода, парно и газ от официалните ВиК и ЕРП дружества в България и ги показва в реално време на карта.">
+  <link rel="canonical" href="https://sparkstopapp.com/about.html">
+  <link rel="icon" type="image/png" href="/favicon-32.png">
+  <link rel="stylesheet" href="/vendor/tailwind/tailwind-built.css">
+  <link href="/vendor/fonts/fonts.css" rel="stylesheet">
+  <script src="/vendor/lucide/lucide.min.js"></script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: #060B19;
+      color: #F3F4F6;
+    }
+    /* Gradient on its own fixed layer - `background-attachment: fixed` re-paints the
+       whole background on every scroll frame on phones. */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: radial-gradient(circle at 18% 22%, rgba(6, 182, 212, 0.16), transparent 40%),
+                  radial-gradient(circle at 82% 64%, rgba(120, 35, 190, 0.28), transparent 45%),
+                  #060B19;
+    }
+    .glass-card {
+      background: rgba(12, 25, 58, 0.75);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+    }
+    .tech-badge {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+  <header class="w-full px-4 sm:px-6 py-4 border-b border-white/5">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-3">
+      <a href="/" class="flex items-center gap-2.5">
+        <div class="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-black border border-cyan-400/30">
+          <img src="/icon-192.png" alt="" class="w-full h-full object-cover">
+        </div>
+        <span class="font-extrabold text-lg">СпаркСтоп</span>
+      </a>
+      <a href="/" class="text-xs sm:text-sm font-semibold text-gray-400 hover:text-cyan-300 transition flex items-center gap-1.5">
+        <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Назад към началната страница
+      </a>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-14 w-full">
+
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-[11px] font-bold uppercase tracking-wider mb-4">
+        <i data-lucide="info" class="w-3 h-3"></i> За проекта
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold mb-4">Какво е СпаркСтоп?</h1>
+      <p class="text-sm sm:text-base text-gray-300 leading-relaxed">
+        СпаркСтоп е система, която следи в реално време официалните съобщения на ВиК и ЕРП дружествата в цяла България,
+        и с помощта на изкуствен интелект автоматично извлича кои улици, квартали и села са засегнати — за да можеш
+        да разбереш веднага дали има авария на твоя адрес, без да търсиш ръчно из сайтовете на доставчиците.
+      </p>
+    </div>
+
+    <!-- HOW IT WORKS STRIP -->
+    <div class="glass-card rounded-2xl p-6 sm:p-8 mb-12">
+      <h2 class="text-lg font-bold text-white mb-5 flex items-center gap-2">
+        <i data-lucide="workflow" class="w-5 h-5 text-cyan-400"></i> Как работи
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-300">
+        <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-400/30 flex items-center justify-center text-cyan-300 font-bold flex-shrink-0">1</div>
+          <p><strong class="text-white block mb-1">Автоматично събиране</strong>Софтуерни модули четат периодично официалните сайтове на ВиК, ЕРП, топлофикационните и газовите дружества в цялата страна.</p>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-400/30 flex items-center justify-center text-purple-300 font-bold flex-shrink-0">2</div>
+          <p><strong class="text-white block mb-1">AI анализ на текста</strong>Изкуствен интелект извлича населено място, улици, номера и часови диапазон от свободния текст на всяко съобщение.</p>
+        </div>
+        <div class="flex gap-3">
+          <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-400/30 flex items-center justify-center text-amber-300 font-bold flex-shrink-0">3</div>
+          <p><strong class="text-white block mb-1">Карта и известия</strong>Резултатът се показва на интерактивна карта и по избор изпраща push известие за запазените ти адреси.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TECHNOLOGIES -->
+    <div class="mb-12">
+      <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+        <i data-lucide="cpu" class="w-5 h-5 text-cyan-400"></i> Използвани технологии
+      </h2>
+      <p class="text-xs text-gray-400 mb-5">Технологичен стек, на който работи платформата.</p>
+      <div class="flex flex-wrap gap-2.5">
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-green-500"></span>Node.js</span>
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-gray-300"></span>Express</span>
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-sky-400"></span>PostgreSQL</span>
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-cyan-400"></span>Tailwind CSS</span>
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400"></span>Leaflet.js</span>
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-purple-400"></span>Google Gemini AI</span>
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-orange-400"></span>Firebase Cloud Messaging</span>
+        <span class="tech-badge px-3.5 py-1.5 rounded-xl text-xs font-semibold text-gray-200 flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-yellow-300"></span>Resend API</span>
+      </div>
+    </div>
+
+    <!-- AUTHOR -->
+    <div>
+      <h2 class="text-lg font-bold text-white mb-1 flex items-center gap-2">
+        <i data-lucide="users" class="w-5 h-5 text-cyan-400"></i> Автор на проекта
+      </h2>
+      <p class="text-xs text-gray-400 mb-5">Разработил и поддържащ СпаркСтоп.</p>
+
+      <div class="glass-card rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
+        <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-500 flex items-center justify-center text-2xl font-extrabold text-black flex-shrink-0 shadow-lg shadow-cyan-500/20">
+          ПГ
+        </div>
+        <div class="flex-1">
+          <div class="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-2">
+            <h3 class="text-xl font-extrabold text-white">Павел Герев</h3>
+            <span class="inline-flex self-center sm:self-auto items-center gap-1 px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-300 text-[11px] font-bold w-fit">
+              Автор &amp; Софтуерен инженер (Full-Stack Developer)
+            </span>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed mb-4">
+            SparkStop е цялостно проектиран и разработен самостоятелно от Павел Герев. Платформата съчетава интелигентно
+            събиране на данни (scraping) от ВиК и ЕРП дружества в България, AI обработка на текста за точно
+            гео-локализиране и модерна карта с известяване чрез Push нотификации за засегнатите адреси.
+          </p>
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2.5">
+            <a href="mailto:contact@sparkstopapp.com" class="px-3.5 py-2 rounded-xl text-xs font-semibold text-black bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 transition flex items-center gap-1.5">
+              <i data-lucide="mail" class="w-3.5 h-3.5"></i> contact@sparkstopapp.com
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-[#070b15] py-12 border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col items-center text-center md:flex-row md:flex-wrap md:justify-center md:items-start md:text-left gap-x-16 gap-y-10">
+
+        <div class="space-y-3 md:max-w-xs">
+          <a href="/" class="flex items-center justify-center md:justify-start gap-2.5">
+            <div class="w-9 h-9 rounded-xl overflow-hidden flex items-center justify-center bg-black border border-cyan-400/30 flex-shrink-0">
+              <img src="/icon-192.png" alt="" class="w-full h-full object-cover">
+            </div>
+            <span class="font-extrabold text-lg text-white">СпаркСтоп</span>
+          </a>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Следи в реално време аварии на ток, вода, парно и газ в цяла България. Автоматично събрани данни от официалните доставчици, на едно място.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 tracking-wider mb-4">ИНФОРМАЦИЯ</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="/about.html" class="hover:text-cyan-300 transition">За проекта</a></li>
+            <li><a href="/#official-sources" class="hover:text-cyan-300 transition">Официални източници</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold text-gray-400 tracking-wider mb-4">ПРАВНИ УСЛОВИЯ</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="/terms.html" class="hover:text-cyan-300 transition">Общи условия</a></li>
+            <li><a href="/privacy.html" class="hover:text-cyan-300 transition">Политика за поверителност</a></li>
+            <li><a href="/gdpr.html" class="hover:text-cyan-300 transition">GDPR</a></li>
+          </ul>
+          <a href="mailto:contact@sparkstopapp.com" class="inline-flex items-center gap-1.5 text-xs text-slate-400 hover:text-cyan-300 transition mt-4">
+            <i data-lucide="mail" class="w-3.5 h-3.5 text-cyan-400"></i> contact@sparkstopapp.com
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-white/5 text-center text-xs text-gray-400">
+        © 2026 SparkStop. Разработено от Павел Герев • Всички права запазени.
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

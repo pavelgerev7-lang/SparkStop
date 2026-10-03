@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: sparkstop-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DATABASE_URL
+        sync: false # Neon connection string (see schema.sql) — not a Render-managed database
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: FIREBASE_SERVICE_ACCOUNT
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_SENDER_EMAIL
+        value: contact@sparkstopapp.com
+      - key: SCRAPER_CRON_SCHEDULE
+        value: "*/15 * * * *"
+      - key: QUIET_HOURS # no scraping between 01:00 and 06:00 Sofia time, so Neon can suspend; "off" disables
+        value: "1-6"

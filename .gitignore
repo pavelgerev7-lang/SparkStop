@@ -1,0 +1,9 @@
+node_modules/
+.env
+# Local JSON fallback database: holds user e-mails/phones/push tokens when it is used — never commit it.
+data/local_db.json
+# Android app build output and signing keys
+android/build/
+*.keystore
+*.jks
+android/*.txt

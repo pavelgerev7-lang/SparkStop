@@ -1,0 +1,35 @@
+{
+  "name": "СпаркСтоп — Следене на аварии в реално време",
+  "short_name": "СпаркСтоп",
+  "description": "СпаркСтоп следи в реално време авариите на ток, вода и парно в цяла България с AI известия и интерактивна карта.",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "categories": ["utilities", "news"],
+  "display": "standalone",
+  "background_color": "#060B19",
+  "theme_color": "#060B19",
+  "orientation": "portrait-primary",
+  "lang": "bg",
+  "gcm_sender_id": "103953800507",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
